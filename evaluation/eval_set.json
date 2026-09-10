@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Who is NVIDIA's independent auditor?",
+    "expected_chunk_ids": [218],
+    "expected_answer_contains": ["PricewaterhouseCoopers"]
+  },
+  {
+    "question": "What does NVIDIA say about export controls affecting sales to China?",
+    "expected_chunk_ids": [33, 114],
+    "expected_answer_contains": ["China", "export"]
+  },
+  {
+    "question": "What are NVIDIA's risk factors related to competitors?",
+    "expected_chunk_ids": [26, 121],
+    "expected_answer_contains": ["competitor"]
+  },
+  {
+    "question": "Where is NVIDIA's headquarters located?",
+    "expected_chunk_ids": [147],
+    "expected_answer_contains": ["Santa Clara"]
+  },
+  {
+    "question": "What does NVIDIA say about cybersecurity risk management?",
+    "expected_chunk_ids": [143],
+    "expected_answer_contains": ["cybersecurity"]
+  },
+  {
+    "question": "What was NVIDIA's revenue according to the MD&A section?",
+    "expected_chunk_ids": [164],
+    "expected_answer_contains": ["revenue"]
+  },
+  {
+    "question": "What does NVIDIA say about automotive revenue and Blackwell demand?",
+    "expected_chunk_ids": [165],
+    "expected_answer_contains": ["automotive"]
+  },
+  {
+    "question": "What does NVIDIA say about research and development expense?",
+    "expected_chunk_ids": [180],
+    "expected_answer_contains": ["research and development"]
+  },
+  {
+    "question": "What subcontractors and contract manufacturers does NVIDIA use?",
+    "expected_chunk_ids": [25],
+    "expected_answer_contains": ["Hon Hai", "Wistron"]
+  },
+  {
+    "question": "What does NVIDIA say about unresolved staff comments?",
+    "expected_chunk_ids": [142],
+    "expected_answer_contains": ["None"]
+  },
+  {
+    "question": "What does NVIDIA say about mine safety disclosures?",
+    "expected_chunk_ids": [149],
+    "expected_answer_contains": ["not applicable"]
+  },
+  {
+    "question": "What does NVIDIA say about controls and procedures?",
+    "expected_chunk_ids": [196],
+    "expected_answer_contains": ["disclosure controls"]
+  }
+]

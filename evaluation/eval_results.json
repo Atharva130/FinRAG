@@ -1,0 +1,240 @@
+{
+  "top_k": 5,
+  "total_questions": 12,
+  "average_recall_at_k": 0.625,
+  "answer_keyword_accuracy": 0.5833333333333334,
+  "results": [
+    {
+      "question": "Who is NVIDIA's independent auditor?",
+      "expected_chunk_ids": [
+        218
+      ],
+      "retrieved_chunk_ids": [
+        218,
+        209,
+        298,
+        332,
+        342
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA\u2019s independent auditor is **PricewaterhouseCoopers LLP**.  \n[Sources: chunk_id 218]",
+      "expected_keywords": [
+        "PricewaterhouseCoopers"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "What does NVIDIA say about export controls affecting sales to China?",
+      "expected_chunk_ids": [
+        33,
+        114
+      ],
+      "retrieved_chunk_ids": [
+        120,
+        121,
+        109,
+        123,
+        110
+      ],
+      "recall_at_k": 0.0,
+      "generated_answer": "NVIDIA says that U.S. export controls have already and may in the future reduce demand for its products in China, potentially leading to excess inventory and supply\u2011chain disruptions.  It also notes that Chinese regulators have questioned the company\u2019s compliance with those controls\u2014specifically that offering \u201cdegraded\u201d products to the Chinese market may violate the terms of its Mellanox acquisition and could result in penalties or other restrictions.  \n\n[Sources: chunk_id 121, chunk_id 110]",
+      "expected_keywords": [
+        "China",
+        "export"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "What are NVIDIA's risk factors related to competitors?",
+      "expected_chunk_ids": [
+        26,
+        121
+      ],
+      "retrieved_chunk_ids": [
+        157,
+        121,
+        46,
+        120,
+        38
+      ],
+      "recall_at_k": 0.5,
+      "generated_answer": "NVIDIA\u2019s risk factors that involve competitors include:\n\n* **Competition could adversely impact our market share and financial results.**  \n  [Sources: chunk_id 46]\n\n* **Export controls may disadvantage NVIDIA relative to competitors that sell chips outside the scope of such controls, and may encourage customers to purchase from those competitors instead of NVIDIA.**  \n  [Sources: chunk_id 120, chunk_id 121]",
+      "expected_keywords": [
+        "competitor"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "Where is NVIDIA's headquarters located?",
+      "expected_chunk_ids": [
+        147
+      ],
+      "retrieved_chunk_ids": [
+        158,
+        6,
+        239,
+        157,
+        218
+      ],
+      "recall_at_k": 0.0,
+      "generated_answer": "NVIDIA\u2019s headquarters is located in Santa\u202fClara, California.  \n[Sources: chunk_id 158, 6, 239, 157, 218]",
+      "expected_keywords": [
+        "Santa Clara"
+      ],
+      "answer_correct": false
+    },
+    {
+      "question": "What does NVIDIA say about cybersecurity risk management?",
+      "expected_chunk_ids": [
+        143
+      ],
+      "retrieved_chunk_ids": [
+        143,
+        157,
+        145,
+        80,
+        144
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA describes its cybersecurity risk management as a comprehensive, governance\u2011driven program that integrates prevention, detection, response, and recovery into its overall risk framework. Key elements include:\n\n* **Infrastructure, policies and procedures** that proactively prevent or reduce the impact of incidents and reactively address them when they occur.  \n* Use of **ISO\u202f27001** (and related standards such as ISO\u202f28001 and C\u2011TPAT) as a baseline for information\u2011security management and continuous evaluation of security measures.  \n* **External expertise** \u2013 consulting with cybersecurity firms and risk\u2011management experts to shape strategy.  \n* **Training and policies** that address new global privacy and cybersecurity laws and aim to prevent, detect, respond to, mitigate and recover from significant threats.  \n* **Board and Audit Committee oversight** \u2013 the Board, through the Audit Committee, reviews the adequacy and effectiveness of security policies, internal controls, and receives regular updates from the Chief Security Officer and security team.  \n* A **vendor\u2011risk assessment process** that includes supplier questionnaires, review of high\u2011risk suppliers\u2019 conformance to industry standards, and evaluation of data\u2011privacy and security controls for third\u2011party access to confidential information.  \n\nThese measures are intended to manage material cybersecurity risks and protect the company\u2019s information, products, and operations.  \n\n[Sources: chunk_id 143, 145, 144, 80]",
+      "expected_keywords": [
+        "cybersecurity"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "What was NVIDIA's revenue according to the MD&A section?",
+      "expected_chunk_ids": [
+        164
+      ],
+      "retrieved_chunk_ids": [
+        325,
+        218,
+        324,
+        174,
+        239
+      ],
+      "recall_at_k": 0.0,
+      "generated_answer": "This is not addressed in the retrieved sections of the filing.  \n[Sources: chunk_id 174]",
+      "expected_keywords": [
+        "revenue"
+      ],
+      "answer_correct": false
+    },
+    {
+      "question": "What does NVIDIA say about automotive revenue and Blackwell demand?",
+      "expected_chunk_ids": [
+        165
+      ],
+      "retrieved_chunk_ids": [
+        165,
+        158,
+        176,
+        324,
+        325
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "",
+      "expected_keywords": [
+        "automotive"
+      ],
+      "answer_correct": false
+    },
+    {
+      "question": "What does NVIDIA say about research and development expense?",
+      "expected_chunk_ids": [
+        180
+      ],
+      "retrieved_chunk_ids": [
+        218,
+        53,
+        174,
+        328,
+        296
+      ],
+      "recall_at_k": 0.0,
+      "generated_answer": "NVIDIA reports that its research and development (R&D) expense was:\n\n- **$18.5\u202fbillion** for the year ended January\u202f25,\u202f2026, **$12.9\u202fbillion** for the year ended January\u202f26,\u202f2025, and **$8.7\u202fbillion** for the year ended January\u202f28,\u202f2024.  \n- R&D expense represented **8.6\u202f%** of revenue in 2026 and **9.9\u202f%** of revenue in 2025.  \n\nThese figures are presented in the Consolidated Statements of Income and the accompanying percentage\u2011of\u2011revenue table.  \n\n[SOURCES: chunk_id 218, chunk_id 174]",
+      "expected_keywords": [
+        "research and development"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "What subcontractors and contract manufacturers does NVIDIA use?",
+      "expected_chunk_ids": [
+        25
+      ],
+      "retrieved_chunk_ids": [
+        25,
+        243,
+        9,
+        6,
+        67
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA contracts with the following subcontractors and contract manufacturers to assemble, test and package its final products: Hon\u202fHai\u202fPrecision\u202fIndustry\u202fCo.,\u202fLtd.; Wistron\u202fCorporation; and Fabrinet.  \n\n[SOURCES: chunk_id\u202f25]",
+      "expected_keywords": [
+        "Hon Hai",
+        "Wistron"
+      ],
+      "answer_correct": false
+    },
+    {
+      "question": "What does NVIDIA say about unresolved staff comments?",
+      "expected_chunk_ids": [
+        142
+      ],
+      "retrieved_chunk_ids": [
+        142,
+        298,
+        301,
+        157,
+        284
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA reports that there are no unresolved staff comments.  \n[Sources: chunk_id 142]",
+      "expected_keywords": [
+        "None"
+      ],
+      "answer_correct": false
+    },
+    {
+      "question": "What does NVIDIA say about mine safety disclosures?",
+      "expected_chunk_ids": [
+        149
+      ],
+      "retrieved_chunk_ids": [
+        149,
+        300,
+        239,
+        302,
+        298
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA states that mine safety disclosures are not applicable. [Sources: chunk_id 149]",
+      "expected_keywords": [
+        "not applicable"
+      ],
+      "answer_correct": true
+    },
+    {
+      "question": "What does NVIDIA say about controls and procedures?",
+      "expected_chunk_ids": [
+        196
+      ],
+      "retrieved_chunk_ids": [
+        199,
+        196,
+        300,
+        109,
+        120
+      ],
+      "recall_at_k": 1.0,
+      "generated_answer": "NVIDIA states that its disclosure controls and procedures are **effective** and provide **reasonable assurance** that information required by the SEC is recorded, processed, summarized, and reported within the specified time periods, and that this information is communicated to management for timely decision\u2011making. The company also acknowledges that internal controls have **inherent limitations** \u2013 they cannot prevent all errors or fraud, provide only reasonable (not absolute) assurance, and no evaluation can guarantee that all control issues or instances of fraud have been detected. Management is responsible for establishing and maintaining adequate internal control over financial reporting.  \n\n[SOURCES: chunk_id 199, 196]",
+      "expected_keywords": [
+        "disclosure controls"
+      ],
+      "answer_correct": true
+    }
+  ]
+}
