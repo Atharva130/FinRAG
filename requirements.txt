@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+lxml
+python-dotenv
+edgartools
+sentence-transformers
+chromadb
+rank_bm25
+groq
