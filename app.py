@@ -2,7 +2,7 @@
 import streamlit as st
 from rag_pipeline import RAGPipeline
 
-st.set_page_config(page_title="FinDocRAG - NVIDIA 10-K Assistant", page_icon="📊")
+st.set_page_config(page_title="FinRAG - NVIDIA 10-K Assistant", page_icon="📊")
 
 st.title("📊 FinDocRAG")
 st.caption("Ask questions about NVIDIA's latest 10-K filing — answers are grounded in the actual document, with citations.")
