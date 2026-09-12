@@ -1,8 +1,8 @@
-# 📊 FinRAG — SEC Filing Research Assistant
+# 📊 FinDocRAG — SEC Filing Research Assistant
 
 A retrieval-augmented question-answering system for SEC 10-K filings. Ask natural-language questions about a company's annual report and get answers grounded in the actual filing text — with exact source chunks cited, not paraphrased from memory.
 
-**Live demo:** [Add your Streamlit Cloud link here once deployed]
+**Live demo:** https://atharva130-finrag-app-jrd75h.streamlit.app/
 
 ---
 
@@ -43,20 +43,7 @@ This means the final ranking reflects actual query-document relevance rather tha
 
 A **12-question evaluation set** was built manually from the filing, with verified ground-truth source chunk IDs.
 
-The pipeline is scored automatically on:
-
-- **Recall@5** — Did retrieval surface the correct source chunk at all?
-- **Answer keyword accuracy** — Did the generated answer contain the expected factual content?
-
-### Evaluation Results
-
-**Recall@5 = 62.5%**
-
-**Answer keyword accuracy = 58.3%**
-
-See `evaluation/eval_results.json` for the full per-question breakdown.
-
-These numbers are reported honestly, including the questions where retrieval missed. This provides a more credible signal than an unverified claim that the system simply "works great."
+The pipeline is evaluated using multiple metrics covering both retrieval and generation quality.
 
 ---
 
@@ -149,7 +136,7 @@ User Query
 | Keyword search | `rank_bm25` |
 | Reranker | `cross-encoder/ms-marco-MiniLM-L-6-v2` |
 | LLM | Groq API (`openai/gpt-oss-20b`) |
-| Evaluation | Custom scoring script — Recall@k + answer-keyword accuracy |
+| Evaluation | Custom scoring + RAGAS Faithfulness |
 | Frontend | Streamlit |
 
 ---
@@ -173,7 +160,8 @@ FinRAG/
 ├── evaluation/
 │   ├── eval_set.json
 │   ├── run_eval.py
-│   └── eval_results.json
+│   ├── eval_results.json
+│   └── ragas_results.json
 │
 ├── data/
 │   └── processed/
@@ -194,7 +182,8 @@ FinRAG/
 | `generation/generate_answer.py` | Grounded answer generation |
 | `evaluation/eval_set.json` | 12 manually verified Q&A pairs |
 | `evaluation/run_eval.py` | Evaluation/scoring script |
-| `evaluation/eval_results.json` | Evaluation results |
+| `evaluation/eval_results.json` | Retrieval + keyword evaluation results |
+| `evaluation/ragas_results.json` | RAGAS Faithfulness evaluation results |
 | `rag_pipeline.py` | End-to-end RAG pipeline |
 | `app.py` | Streamlit frontend |
 
@@ -235,8 +224,6 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your_key_here
 ```
 
-Get a free API key from Groq.
-
 ### 5. Fetch and index a filing
 
 The NVIDIA filing is already included in `data/processed/`.
@@ -256,8 +243,6 @@ python ingestion/embed_and_store.py
 streamlit run app.py
 ```
 
-The Streamlit application will open in your browser.
-
 ### 7. Run the evaluation
 
 ```bash
@@ -268,36 +253,34 @@ python evaluation/run_eval.py
 
 ## Evaluation Results
 
-The current evaluation uses a manually verified set of **12 questions**.
+Two separate evaluation layers were used, since they measure different things:
 
-| Metric | Score |
-|---|---:|
-| Recall@5 | **62.5%** |
-| Answer keyword accuracy | **58.3%** |
-| Questions evaluated | **12** |
+| Metric | What it measures | How it's judged | Score |
+|---|---|---|---|
+| Recall@5 (retrieval) | Did retrieval surface the correct source chunk at all? | Manual ground truth (verified by reading the actual filing) | 62.5% |
+| Answer keyword accuracy | Does the generated answer contain the expected facts? | Exact keyword matching | 58.3% |
+| RAGAS Faithfulness | Is the generated answer's content actually supported by the retrieved context? | LLM-as-judge (RAGAS, via Groq) | 95.56% (9/12 questions successfully judged) |
 
-Full per-question results, including failed questions and their causes, are available in:
+**Key finding:** Faithfulness is high while Recall@5 is comparatively lower — this indicates the system's main bottleneck is **retrieval**, not generation. When the correct context is retrieved, the LLM answers faithfully almost every time; the weaker link is reliably surfacing the single best chunk out of the candidate pool in the first place.
 
-```text
-evaluation/eval_results.json
-```
+All 12 questions were evaluated across all three metrics. Full per-question breakdown is in `evaluation/eval_results.json` (Recall@5 + keyword accuracy) and `evaluation/ragas_results.json` (RAGAS Faithfulness).
 
 ---
 
 ## Known Limitations
 
-- **Single-company scope:** Currently tested on the NVIDIA 10-K only. The architecture generalizes to other filings but has not yet been extended to multiple companies.
-
-- **Financial statement tables:** Financial statements from Item 8 are indexed under a different section label (`Item 15`) due to how 10-Ks physically place financial statements later in the document. This is a known quirk of SEC filing structure, not a parsing bug.
-
-- **General-purpose reranker:** The current reranker (`ms-marco-MiniLM-L-6-v2`) is not fine-tuned specifically on financial text and can occasionally rank boilerplate section headers above substantive content.
+- Single-company scope (NVIDIA 10-K only) — architecture generalizes to any filing, not yet extended to multiple companies.
+- Financial statement tables (Item 8) are indexed under a different section label (Item 15) due to how 10-Ks physically place financial statements later in the document — a known quirk of SEC filing structure, not a parsing bug.
+- Reranker is a general-purpose model (`ms-marco-MiniLM-L-6-v2`), not fine-tuned on financial text — occasionally ranks boilerplate section headers above substantive content.
+- RAGAS Faithfulness scoring failed on 3 of 12 questions due to JSON structured-output errors.
 
 ---
 
 ## Future Improvements
 
-- Fine-tune or replace the reranker with a finance-domain model.
-- Extend the system to support multiple companies and filings.
+- Fine-tune or swap the reranker for a finance-domain model.
+- Extend to multi-company support.
+- Add more robust structured-output handling for RAGAS evaluation failures.
 - Add RAGAS-based semantic answer scoring alongside keyword matching.
 - Improve retrieval and reranking for financial statement tables.
 - Expand the evaluation dataset with more questions and filing sections.
@@ -334,7 +317,3 @@ The project focuses on:
 - **Quantitative retrieval evaluation**
 
 ---
-
-## License
-
-This project is intended for educational and portfolio purposes.
