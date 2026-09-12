@@ -2,7 +2,7 @@
 
 A retrieval-augmented question-answering system for SEC 10-K filings. Ask natural-language questions about a company's annual report and get answers grounded in the actual filing text — with exact source chunks cited, not paraphrased from memory.
 
-**Live demo:** https://atharva130-finrag-app-jrd75h.streamlit.app/
+**Live demo:** [Add your Streamlit Cloud link here once deployed]
 
 ---
 
