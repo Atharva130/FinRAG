@@ -1,0 +1,65 @@
+{
+  "average_faithfulness": 0.9555555555555555,
+  "results": [
+    {
+      "question": "Who is NVIDIA's independent auditor?",
+      "answer": "NVIDIA\u2019s independent auditor is **PricewaterhouseCoopers LLP**.  \n[Sources: chunk_id 218]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about export controls affecting sales to China?",
+      "answer": "NVIDIA says that U.S. export controls have already and may in the future reduce demand for its products in China.  The company notes that the controls can force customers to \u201cdesign\u2011out\u201d U.S. semiconductors, create excess inventory, and trigger compliance burdens that hurt sales.  It also reports that China\u2019s antitrust regulators have investigated its compliance with U.S. export controls, finding that the company\u2019s requirement to offer degraded products in China \u201cdiscriminated unfairly\u201d and may violate the terms of its Mellanox acquisition, potentially exposing NVIDIA to penalties, restrictions, or other adverse actions in China.  Additionally, the U.S. government may impose restrictions on the import and sale of products that incorporate Chinese\u2011developed technology, which could further limit NVIDIA\u2019s ability to serve automotive and other customers in China.  \n\n[Sources: chunk_id 120, 121, 109, 110, 123]",
+      "faithfulness_score": null
+    },
+    {
+      "question": "What are NVIDIA's risk factors related to competitors?",
+      "answer": "NVIDIA\u2019s risk factors that relate to competitors include:\n\n- **Competition could adversely impact our market share and financial results.**  \n\n[Sources: chunk_id 46]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "Where is NVIDIA's headquarters located?",
+      "answer": "NVIDIA\u2019s headquarters is located in Santa\u202fClara, California.  \n[Sources: chunk_id 158, 6, 239, 157, 218]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about cybersecurity risk management?",
+      "answer": "NVIDIA describes its cybersecurity risk\u2011management approach as a comprehensive, governance\u2011driven program that includes:\n\n* **Infrastructure, policies and procedures** designed to prevent, detect, respond to, mitigate and recover from cybersecurity incidents, following frameworks such as ISO\u202f27001 and continuously evolving the controls.  \n* **Risk\u2011management integration** with the company\u2019s overall risk\u2011management systems, supported by cybersecurity and data\u2011privacy training and policies that address new legal requirements and significant threats.  \n* **Board and Audit Committee oversight**, with the Audit Committee reviewing the adequacy and effectiveness of information\u2011security policies and internal controls, and receiving regular updates from the Chief Security Officer and security team.  \n* **Vendor\u2011risk assessment** that uses supplier questionnaires to evaluate cybersecurity risks, reviews vendors\u2019 data\u2011privacy and security controls, and assesses high\u2011risk suppliers against industry standards (ISO\u202f27001, ISO\u202f28001, C\u2011TPAT) and additional security requirements.  \n\n[Sources: chunk_id 143, 145, 144]",
+      "faithfulness_score": null
+    },
+    {
+      "question": "What was NVIDIA's revenue according to the MD&A section?",
+      "answer": "NVIDIA\u2019s revenue for the most recent fiscal year reported in the MD&A (Item\u202f15) was **$215,938\u202fmillion** (fiscal year ended January\u202f25,\u202f2026).  \n[Sources: chunk_id\u202f218]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about automotive revenue and Blackwell demand?",
+      "answer": "NVIDIA reports that automotive revenue in fiscal\u202f2026 rose 39\u202f% from the prior year, largely because of continued adoption of its self\u2011driving platforms.  \nIt also says that demand for its Blackwell architecture is strong \u2013 Blackwell systems now represent the majority of its Data Center revenue and are a key driver of the company\u2019s overall revenue growth.  \n\n[Sources: chunk_id\u202f165, chunk_id\u202f158]",
+      "faithfulness_score": 0.6
+    },
+    {
+      "question": "What does NVIDIA say about research and development expense?",
+      "answer": "NVIDIA reports that its research and development expense was $18.5\u202fbillion for the year ended January\u202f25,\u202f2026, $12.9\u202fbillion for the year ended January\u202f26,\u202f2025, and $8.7\u202fbillion for the year ended January\u202f28,\u202f2024.  These expenses represented 8.6\u202f% of revenue in 2026 and 9.9\u202f% of revenue in 2025.  \n\n[Sources: chunk_id 218, chunk_id 174]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What subcontractors and contract manufacturers does NVIDIA use?",
+      "answer": "NVIDIA contracts with subcontractors and contract manufacturers such as **Hon\u202fHai\u202fPrecision\u202fIndustry\u202fCo.,\u202fLtd.**, **Wistron\u202fCorporation**, and **Fabrinet** to perform assembly, testing and packaging of its final products.  \n\n[SOURCES: chunk_id\u202f25]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about unresolved staff comments?",
+      "answer": "NVIDIA reports that there are no unresolved staff comments.  \n[Sources: chunk_id 142]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about mine safety disclosures?",
+      "answer": "NVIDIA states that mine safety disclosures are not applicable. [Sources: chunk_id 149]",
+      "faithfulness_score": 1.0
+    },
+    {
+      "question": "What does NVIDIA say about controls and procedures?",
+      "answer": "NVIDIA states that its disclosure controls and procedures are effective, providing reasonable assurance that information required by the SEC is recorded, processed, summarized, and reported on time and that it is communicated to senior management for timely decisions. The company also says it has established and maintains adequate internal control over financial reporting, with management responsible for its design and operation. NVIDIA acknowledges that, like all control systems, its controls can only provide reasonable\u2014not absolute\u2014assurance, that they are subject to inherent limitations, and that no evaluation can guarantee all errors or fraud are detected.  \n\n[Sources: chunk_id 196, chunk_id 199]",
+      "faithfulness_score": null
+    }
+  ]
+}
