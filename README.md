@@ -107,6 +107,9 @@ User Query
              +
       chunk_id Citations
 ```
+## Architectural Diagram 
+
+![FinDocRAG Architecture](docs/architecture.png)
 
 ### Pipeline Summary
 
