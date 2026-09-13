@@ -111,6 +111,8 @@ User Query
 
 ![FinDocRAG Architecture](https://i.postimg.cc/Pq9Rzc5X/architecture.png)
 
+---
+
 ### Pipeline Summary
 
 1. Fetch the SEC 10-K filing from EDGAR.
