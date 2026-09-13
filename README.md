@@ -109,7 +109,7 @@ User Query
 ```
 ## Architectural Diagram 
 
-![FinDocRAG Architecture](docs/architecture.png)
+![FinDocRAG Architecture](https://i.postimg.cc/Pq9Rzc5X/architecture.png)
 
 ### Pipeline Summary
 
